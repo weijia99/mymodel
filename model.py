@@ -9,7 +9,7 @@ from scipy import linalg as la
 # 进行求解矩阵的
 
 logabs = lambda x: torch.log(torch.abs(x))
-device = "cuda 0" if torch.cuda.is_available() else "cpu"
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 class ActNorm(nn.Module):
